@@ -1,0 +1,7 @@
+nx_crypto_sha2.c:95:22:_nx_crypto_sha256_initialize	16	static
+nx_crypto_sha2.c:186:21:_nx_crypto_sha256_update	32	static
+nx_crypto_sha2.c:313:21:_nx_crypto_sha256_digest_calculate	40	static
+nx_crypto_sha2.c:432:21:_nx_crypto_sha256_process_buffer	64	static
+nx_crypto_sha2.c:546:22:_nx_crypto_method_sha256_init	24	static
+nx_crypto_sha2.c:618:22:_nx_crypto_method_sha256_cleanup	16	static
+nx_crypto_sha2.c:693:22:_nx_crypto_method_sha256_operation	32	static

@@ -1,0 +1,4 @@
+collector_system_information.c:37:1:components_factory_SystemInformation_load	16	static
+collector_system_information.c:39:21:_cm_init	24	static
+collector_system_information.c:45:21:_collector_system_information_serialize_events	48	static
+collector_system_information.c:75:21:_collect_operation_system_information	16	static

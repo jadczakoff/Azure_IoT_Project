@@ -1,0 +1,2 @@
+nx_secure_tls_process_serverhello_extensions.c:107:6:_nx_secure_tls_process_serverhello_extensions	40	static
+nx_secure_tls_process_serverhello_extensions.c:611:13:_nx_secure_tls_proc_serverhello_sec_reneg_extension	40	static

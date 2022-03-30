@@ -1,0 +1,6 @@
+az_context.c:20:22:az_context_get_expiration	24	static
+az_context.c:39:1:az_context_get_value	24	static
+az_context.c:58:1:az_context_create_with_expiration	48	static
+az_context.c:67:1:az_context_create_with_value	48	static
+az_context.c:78:6:az_context_cancel	16	static
+az_context.c:85:19:az_context_has_expired	24	static

@@ -1,0 +1,12 @@
+collector_network_activity.c:186:1:components_factory_NetworkActivity_load	16	static
+collector_network_activity.c:188:21:_cm_init	24	static
+collector_network_activity.c:194:21:_cm_start	16	static
+collector_network_activity.c:210:21:_cm_stop	16	static
+collector_network_activity.c:227:21:_collector_network_activity_serialize_events	48	static
+collector_network_activity.c:291:21:_collector_network_activity_port_init	24	static
+collector_network_activity.c:337:13:_collector_network_activity_port_ip_callback	24	static
+collector_network_activity.c:389:13:_collector_network_activity_port_deinit	16	static
+collector_network_activity.c:414:13:_switch_hashtables	4	static
+collector_network_activity.c:426:13:_append_ipv4_payload_to_list	24	static
+collector_network_activity.c:441:33:_ipv4_callback	72	static
+collector_network_activity.c:677:13:_collector_network_activity_ip_callback	40	static

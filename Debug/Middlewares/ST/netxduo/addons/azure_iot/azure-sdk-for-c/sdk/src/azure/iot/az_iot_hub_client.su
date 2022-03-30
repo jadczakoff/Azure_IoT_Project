@@ -1,0 +1,4 @@
+az_iot_hub_client.c:27:40:az_iot_hub_client_options_default	64	static
+az_iot_hub_client.c:36:24:az_iot_hub_client_init	200	static
+az_iot_hub_client.c:53:24:az_iot_hub_client_get_user_name	248	static
+az_iot_hub_client.c:136:24:az_iot_hub_client_get_client_id	112	static

@@ -1,0 +1,2 @@
+az_iot_hub_client_methods.c:24:24:az_iot_hub_client_methods_parse_received_topic	240	static
+az_iot_hub_client_methods.c:79:24:az_iot_hub_client_methods_response_get_publish_topic	256	static

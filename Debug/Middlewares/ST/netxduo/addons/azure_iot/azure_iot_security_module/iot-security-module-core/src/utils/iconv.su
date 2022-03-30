@@ -1,0 +1,2 @@
+iconv.c:23:7:code2string	16	static
+iconv.c:30:5:string2code	32	static

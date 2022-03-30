@@ -1,0 +1,2 @@
+az_iot_hub_client_sas.c:36:24:az_iot_hub_client_sas_get_signature	240	static
+az_iot_hub_client_sas.c:83:24:az_iot_hub_client_sas_get_password	328	static

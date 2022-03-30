@@ -1,0 +1,13 @@
+az_json_token.c:13:16:_az_json_token_copy_into_span_helper	56	static
+az_json_token.c:43:9:az_json_token_copy_into_span	112	static
+az_json_token.c:59:29:_az_json_unescape_single_byte	16	static
+az_json_token.c:86:26:_az_json_token_is_text_equal_helper	128	static
+az_json_token.c:151:19:az_json_token_is_text_equal	264	static
+az_json_token.c:246:24:az_json_token_get_boolean	32	static
+az_json_token.c:277:31:_az_json_token_get_string_helper	64	static
+az_json_token.c:328:24:az_json_token_get_string	104	static
+az_json_token.c:432:1:az_json_token_get_uint64	128	static
+az_json_token.c:467:1:az_json_token_get_uint32	120	static
+az_json_token.c:501:24:az_json_token_get_int64	128	static
+az_json_token.c:535:24:az_json_token_get_int32	120	static
+az_json_token.c:569:24:az_json_token_get_double	208	static

@@ -1,0 +1,7 @@
+app_threadx.c:89:6:App_ThreadX_Init	24	static
+app_threadx.c:106:6:MX_ThreadX_Init	8	static
+app_threadx.c:123:6:sample_helper_thread_entry	56	static
+app_threadx.c:263:7:dns_create	32	static
+app_threadx.c:308:13:sntp_time_sync_internal	56	static
+app_threadx.c:410:7:sntp_time_sync	32	static
+app_threadx.c:482:7:unix_time_get	16	static

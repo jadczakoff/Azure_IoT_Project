@@ -1,0 +1,17 @@
+collector_collection.c:45:25:collector_collection_init	16	static
+collector_collection.c:72:6:collector_collection_deinit	24	static
+collector_collection.c:88:24:collector_collection_get_head_priority	16	static
+collector_collection.c:94:24:collector_collection_get_next_priority	24	static
+collector_collection.c:105:24:collector_collection_get_by_priority	16	static
+collector_collection.c:115:13:_collector_collection_type_match_function	24	static
+collector_collection.c:122:14:collector_collection_get_collector_by_priority	32	static
+collector_collection.c:148:6:collector_collection_foreach	40	static
+collector_collection.c:162:22:priority_collectors_get_priority	16	static
+collector_collection.c:168:16:priority_collectors_get_list	16	static
+collector_collection.c:174:13:_collector_collection_init_collector_lists	24	static
+collector_collection.c:184:14:priority_collectors_get_current_collector	16	static
+collector_collection.c:190:6:priority_collectors_set_current_collector	16	static
+collector_collection.c:196:14:priority_collectors_get_next_cyclic_collector	24	static
+collector_collection.c:214:14:collector_collection_register	40	static
+collector_collection.c:234:6:collector_collection_unregister	32	static
+collector_collection.c:245:13:_collector_collection_deinit_collector_lists	24	static

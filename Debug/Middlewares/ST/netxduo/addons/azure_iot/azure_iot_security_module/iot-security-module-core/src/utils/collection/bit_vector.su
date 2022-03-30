@@ -1,0 +1,4 @@
+bit_vector.c:19:6:__bit_vector_set	24	static
+bit_vector.c:32:6:__bit_vector_get	24	static
+bit_vector.c:40:6:__is_bit_vector_zero	24	static
+bit_vector.c:52:6:__bit_vector_clean	16	static

@@ -1,0 +1,3 @@
+stack.c:19:20:stack_pop	24	static
+stack.c:37:6:stack_push	24	static
+stack.c:57:21:stack_peek	16	static

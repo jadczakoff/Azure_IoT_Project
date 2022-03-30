@@ -1,0 +1,5 @@
+containerof.h:19:21:_containerof	16	static
+collectors_info.c:35:13:_collector_info_cb	40	static
+collectors_info.c:56:20:collectors_info_init	16	static
+collectors_info.c:74:6:collectors_info_deinit	24	static
+collectors_info.c:86:19:collectors_info_get	24	static

@@ -1,0 +1,2 @@
+security_message.c:21:6:security_message_clear	16	static
+security_message.c:32:6:security_message_is_empty	16	static

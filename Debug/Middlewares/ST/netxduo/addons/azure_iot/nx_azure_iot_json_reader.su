@@ -1,0 +1,13 @@
+nx_azure_iot_json_reader.c:18:13:nx_azure_iot_json_reader_translate_error_code	24	static
+nx_azure_iot_json_reader.c:39:6:nx_azure_iot_json_reader_with_buffer_init	40	static
+nx_azure_iot_json_reader.c:71:6:nx_azure_iot_json_reader_init	40	static
+nx_azure_iot_json_reader.c:121:6:nx_azure_iot_json_reader_deinit	16	static
+nx_azure_iot_json_reader.c:136:6:nx_azure_iot_json_reader_token_is_text_equal	32	static
+nx_azure_iot_json_reader.c:150:6:nx_azure_iot_json_reader_next_token	24	static
+nx_azure_iot_json_reader.c:164:6:nx_azure_iot_json_reader_skip_children	24	static
+nx_azure_iot_json_reader.c:178:6:nx_azure_iot_json_reader_token_bool_get	24	static
+nx_azure_iot_json_reader.c:194:6:nx_azure_iot_json_reader_token_uint32_get	24	static
+nx_azure_iot_json_reader.c:210:6:nx_azure_iot_json_reader_token_int32_get	24	static
+nx_azure_iot_json_reader.c:226:7:nx_azure_iot_json_reader_token_double_get	24	static
+nx_azure_iot_json_reader.c:242:6:nx_azure_iot_json_reader_token_string_get	32	static
+nx_azure_iot_json_reader.c:268:6:nx_azure_iot_json_reader_token_type	16	static

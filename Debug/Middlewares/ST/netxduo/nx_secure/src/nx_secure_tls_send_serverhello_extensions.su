@@ -1,0 +1,2 @@
+nx_secure_tls_send_serverhello_extensions.c:101:6:_nx_secure_tls_send_serverhello_extensions	56	static
+nx_secure_tls_send_serverhello_extensions.c:267:13:_nx_secure_tls_send_serverhello_sec_reneg_extension	40	static

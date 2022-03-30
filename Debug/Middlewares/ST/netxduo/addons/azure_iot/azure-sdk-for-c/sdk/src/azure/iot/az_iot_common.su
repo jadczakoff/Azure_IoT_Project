@@ -1,0 +1,8 @@
+az_iot_common.c:22:24:az_iot_message_properties_init	104	static
+az_iot_common.c:39:1:az_iot_message_properties_append	240	static
+az_iot_common.c:72:24:az_iot_message_properties_find	208	static
+az_iot_common.c:104:24:az_iot_message_properties_next	160	static
+az_iot_common.c:141:22:az_iot_calculate_retry_delay	56	static
+az_iot_common.c:176:22:_az_iot_u32toa_size	24	static
+az_iot_common.c:194:22:_az_iot_u64toa_size	32	static
+az_iot_common.c:213:1:_az_span_copy_url_encode	72	static

@@ -1,0 +1,14 @@
+nx_auto_ip.c:95:7:_nxe_auto_ip_create	48	static,ignoring_inline_asm
+nx_auto_ip.c:164:7:_nx_auto_ip_create	56	static
+nx_auto_ip.c:259:7:_nxe_auto_ip_set_interface	32	static,ignoring_inline_asm
+nx_auto_ip.c:321:7:_nx_auto_ip_set_interface	16	static
+nx_auto_ip.c:382:7:_nxe_auto_ip_get_address	24	static
+nx_auto_ip.c:441:7:_nx_auto_ip_get_address	24	static
+nx_auto_ip.c:514:7:_nxe_auto_ip_start	32	static,ignoring_inline_asm
+nx_auto_ip.c:581:7:_nx_auto_ip_start	16	static
+nx_auto_ip.c:642:7:_nxe_auto_ip_stop	24	static,ignoring_inline_asm
+nx_auto_ip.c:703:7:_nx_auto_ip_stop	24	static
+nx_auto_ip.c:757:7:_nxe_auto_ip_delete	24	static,ignoring_inline_asm
+nx_auto_ip.c:820:7:_nx_auto_ip_delete	24	static
+nx_auto_ip.c:903:7:_nx_auto_ip_thread_entry	64	static
+nx_auto_ip.c:1239:7:_nx_auto_ip_conflict	24	static

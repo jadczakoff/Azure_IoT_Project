@@ -1,0 +1,14 @@
+hashtable.c:24:6:hashtable_init	24	static
+hashtable.c:40:7:hashtable_insert	40	static
+hashtable.c:64:7:hashtable_remove	40	static
+hashtable.c:94:7:hashtable_find	24	static
+hashtable.c:104:8:hashtable_get_depth	32	static
+hashtable.c:131:6:hashtable_foreach	40	static
+hashtable.c:147:6:hashtable_flush	32	static
+hashtable.c:168:6:hashtable_is_empty	24	static
+hashtable.c:183:6:hashtable_update_none_func	16	static
+hashtable.c:188:6:hashtable_equal_default_func	16	static
+hashtable.c:193:14:hashtable_hash_str_default	24	static
+hashtable.c:199:14:hashtable_buffer2hash	24	static
+hashtable.c:211:21:_hash_calc	16	static
+hashtable.c:217:14:_hashtable_find	32	static

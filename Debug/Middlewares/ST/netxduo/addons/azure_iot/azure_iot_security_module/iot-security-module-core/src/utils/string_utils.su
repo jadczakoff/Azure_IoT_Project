@@ -1,0 +1,12 @@
+string_utils.c:21:8:str_len	16	static
+string_utils.c:26:7:str_str	16	static
+string_utils.c:34:5:str_cmp	16	static
+string_utils.c:39:6:str_trim_last_newline	24	static
+string_utils.c:58:7:str_trim	24	static
+string_utils.c:84:6:str_isempty	16	static
+string_utils.c:89:13:str_value_or_empty	16	static
+string_utils.c:94:6:str_is_blank	16	static
+string_utils.c:111:14:str_split	48	static
+string_utils.c:139:5:str_ncmp	24	static
+string_utils.c:153:6:str_starts_from	24	static
+string_utils.c:159:7:replace_chars	32	static

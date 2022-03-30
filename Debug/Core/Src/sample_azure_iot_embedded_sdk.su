@@ -1,0 +1,10 @@
+sample_azure_iot_embedded_sdk.c:127:13:printf_packet	16	static
+sample_azure_iot_embedded_sdk.c:137:13:connection_status_callback	16	static
+sample_azure_iot_embedded_sdk.c:152:13:sample_initialize_iothub	104	static
+sample_azure_iot_embedded_sdk.c:269:13:log_callback	24	static
+sample_azure_iot_embedded_sdk.c:277:6:sample_entry	64	static
+sample_azure_iot_embedded_sdk.c:398:13:sample_dps_entry	80	static
+sample_azure_iot_embedded_sdk.c:488:6:sample_telemetry_thread_entry	96	static
+sample_azure_iot_embedded_sdk.c:553:6:sample_c2d_thread_entry	56	static
+sample_azure_iot_embedded_sdk.c:597:6:sample_direct_method_thread_entry	64	static
+sample_azure_iot_embedded_sdk.c:647:6:sample_device_twin_thread_entry	56	static

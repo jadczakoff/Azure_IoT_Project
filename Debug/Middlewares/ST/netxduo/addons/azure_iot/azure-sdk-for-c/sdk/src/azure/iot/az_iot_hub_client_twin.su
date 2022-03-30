@@ -1,0 +1,3 @@
+az_iot_hub_client_twin.c:30:24:az_iot_hub_client_twin_document_get_publish_topic	240	static
+az_iot_hub_client_twin.c:70:24:az_iot_hub_client_twin_patch_get_publish_topic	240	static
+az_iot_hub_client_twin.c:110:24:az_iot_hub_client_twin_parse_received_topic	432	static

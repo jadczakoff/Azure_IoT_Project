@@ -1,0 +1,5 @@
+components_factory.c:69:29:components_factory_get_load_array	4	static
+components_factory.c:74:16:components_factory_create_id	16	static
+components_factory.c:79:14:components_factory_set	24	static
+components_factory.c:122:6:component_factory_unload	16	static
+components_factory.c:133:6:components_factory_unload	16	static

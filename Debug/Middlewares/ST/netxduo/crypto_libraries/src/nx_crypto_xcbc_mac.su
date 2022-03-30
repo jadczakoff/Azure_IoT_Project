@@ -1,0 +1,2 @@
+nx_crypto_xcbc_mac.c:67:28:_nx_crypto_xcbc_xor	24	static
+nx_crypto_xcbc_mac.c:153:21:_nx_crypto_xcbc_mac	104	static

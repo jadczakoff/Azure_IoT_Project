@@ -1,0 +1,8 @@
+flatcc_refmap.h:85:19:flatcc_refmap_init	16	static
+refmap.c:31:22:_flatcc_refmap_above_load_factor	16	static
+refmap.c:41:6:flatcc_refmap_clear	16	static
+refmap.c:49:22:_flatcc_refmap_hash	48	static
+refmap.c:64:6:flatcc_refmap_reset	16	static
+refmap.c:76:5:flatcc_refmap_resize	40	static
+refmap.c:122:21:flatcc_refmap_insert	48	static
+refmap.c:150:21:flatcc_refmap_find	40	static

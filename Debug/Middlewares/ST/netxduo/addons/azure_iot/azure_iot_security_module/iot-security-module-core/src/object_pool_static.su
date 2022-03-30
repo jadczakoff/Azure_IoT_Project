@@ -1,0 +1,4 @@
+object_pool_static.c:21:13:_object_pool_init	32	static
+object_pool_static.c:41:7:__object_pool_get	24	static
+object_pool_static.c:56:6:__object_pool_free	16	static
+object_pool_static.c:69:8:__object_pool_get_available_size	16	static

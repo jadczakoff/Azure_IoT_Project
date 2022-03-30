@@ -1,0 +1,2 @@
+nx_tcp_socket_send_internal.c:82:13:_nx_tcp_socket_driver_send	80	static
+nx_tcp_socket_send_internal.c:265:7:_nx_tcp_socket_send_internal	192	static,ignoring_inline_asm

@@ -1,0 +1,10 @@
+az_base64.c:278:29:_az_base64_encode	40	static
+az_base64.c:290:29:_az_base64_encode_and_pad_one	32	static
+az_base64.c:301:29:_az_base64_encode_and_pad_two	32	static
+az_base64.c:311:13:_az_base64_write_int_as_four_bytes	16	static
+az_base64.c:320:1:az_base64_encode	232	static
+az_base64.c:367:22:az_base64_get_max_encoded_size	16	static
+az_base64.c:373:29:_az_base64_decode	32	static
+az_base64.c:396:13:_az_base64_write_three_low_order_bytes	16	static
+az_base64.c:404:1:az_base64_decode	256	static
+az_base64.c:517:22:az_base64_get_max_decoded_size	16	static

@@ -1,0 +1,2 @@
+az_iot_provisioning_client_sas.c:33:24:az_iot_provisioning_client_sas_get_signature	200	static
+az_iot_provisioning_client_sas.c:71:24:az_iot_provisioning_client_sas_get_password	296	static

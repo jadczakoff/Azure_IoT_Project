@@ -1,0 +1,2 @@
+nx_tcp_server_socket_unlisten.c:75:13:_nx_tcp_server_socket_driver_unlisten	64	static
+nx_tcp_server_socket_unlisten.c:163:7:_nx_tcp_server_socket_unlisten	40	static

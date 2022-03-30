@@ -1,0 +1,3 @@
+collector_heartbeat.c:28:1:components_factory_Heartbeat_load	16	static
+collector_heartbeat.c:30:21:_collector_heartbeat_init	24	static
+collector_heartbeat.c:35:21:_collector_heartbeat_get_events	24	static

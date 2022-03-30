@@ -1,0 +1,2 @@
+az_iot_hub_client_commands.c:20:24:az_iot_hub_client_commands_response_get_publish_topic	40	static
+az_iot_hub_client_commands.c:32:24:az_iot_hub_client_commands_parse_received_topic	168	static

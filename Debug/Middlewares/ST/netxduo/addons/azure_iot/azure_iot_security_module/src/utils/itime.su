@@ -1,0 +1,2 @@
+itime.c:20:6:itime_init	16	static
+itime.c:25:15:itime_time	16	static

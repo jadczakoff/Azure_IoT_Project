@@ -1,0 +1,2 @@
+nx_secure_tls_record_payload_encrypt.c:82:6:_nx_secure_tls_record_payload_encrypt	128	static
+nx_secure_tls_record_payload_encrypt.c:410:13:_nx_secure_tls_record_data_encrypt_init	104	static

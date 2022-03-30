@@ -1,0 +1,9 @@
+emitter.c:15:12:advance_front	24	static
+emitter.c:57:12:advance_back	24	static
+emitter.c:98:12:copy_front	32	static
+emitter.c:123:12:copy_back	32	static
+emitter.c:147:5:flatcc_emitter_recycle_page	16	static
+emitter.c:161:6:flatcc_emitter_reset	24	static
+emitter.c:190:6:flatcc_emitter_clear	24	static
+emitter.c:206:5:flatcc_emitter	32	static
+emitter.c:252:7:flatcc_emitter_copy_buffer	32	static

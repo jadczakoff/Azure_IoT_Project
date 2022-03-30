@@ -1,0 +1,2 @@
+nx_secure_x509_expiration_check.c:77:6:_nx_secure_x509_expiration_check	32	static
+nx_secure_x509_expiration_check.c:170:13:_nx_secure_x509_asn1_time_to_unix_convert	56	static

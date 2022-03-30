@@ -1,0 +1,2 @@
+nxd_tcp_client_socket_connect.c:79:13:_nxd_tcp_client_socket_driver_connect	72	static
+nxd_tcp_client_socket_connect.c:238:7:_nxd_tcp_client_socket_connect	56	static

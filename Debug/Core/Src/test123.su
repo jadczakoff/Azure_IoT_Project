@@ -1,0 +1,15 @@
+test123.c:99:6:hardware_rand_initialize	4	static
+test123.c:110:5:hardware_rand	4	static
+test123.c:120:6:HAL_TIM_MspPostInit	40	static
+test123.c:157:13:TIM8_Init	200	static
+test123.c:219:6:board_led_config	16	static
+test123.c:255:6:EXTI15_10_IRQHandler	8	static
+test123.c:279:6:SystemClock_Config	248	static
+test123.c:351:6:verify_and_correct_boot_bank	56	static
+test123.c:405:6:board_setup	48	static
+test123.c:569:8:_write	24	static
+test123.c:591:8:_read	24	static
+test123.c:608:13:user_button_callback	4	static
+test123.c:612:6:EXTI1_IRQHandler	8	static
+test123.c:617:6:SPI3_IRQHandler	8	static
+test123.c:622:6:HAL_GPIO_EXTI_Callback	16	static

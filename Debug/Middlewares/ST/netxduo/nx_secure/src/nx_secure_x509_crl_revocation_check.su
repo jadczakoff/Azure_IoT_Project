@@ -1,0 +1,2 @@
+nx_secure_x509_crl_revocation_check.c:95:6:_nx_secure_x509_crl_revocation_check	176	static
+nx_secure_x509_crl_revocation_check.c:269:13:_nx_secure_x509_crl_parse_entry	72	static
