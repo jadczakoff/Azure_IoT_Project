@@ -6,8 +6,18 @@
 #include "stm32l4s5i_iot01.h"
 #include "wifi.h"
 
+#include "stm32l4s5i_iot01_nfctag.h"
+#include "lib_wrapper.h"
+#include "lib_NDEF.h"
+#include "tagtype5_wrapper.h"
+#include "lib_NDEF_AAR.h"
+#include "lib_NDEF_Text.h"
+
 /* Define the default wifi ssid and password. The user can override this 
    via -D command line option or via project settings.  */
+
+char WIFI_SSID_var[128];
+char WIFI_PASSWORD_var[128];
 
 #ifndef WIFI_SSID
 //#error "Symbol WIFI_SSID must be defined."
@@ -88,6 +98,18 @@ uint8_t  IP_Addr[4];
 uint8_t  Gateway_Addr[4];
 uint8_t  DNS1_Addr[4]; 
 uint8_t  DNS2_Addr[4]; 
+
+// Variables for NFC
+
+sRecordInfo_t recordStruct;
+NDEF_Text_info_t TextCont;
+
+uint8_t isInit = 0;
+int32_t ID = 0;
+uint8_t wai_IDD = 0;
+
+uint8_t NFCBuffer[512];
+
 void hardware_rand_initialize(void)
 {
 
@@ -364,7 +386,35 @@ uint32_t  retry_connect=0;
   
   /* Configure push button.  */
   BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
-      
+
+  while (BSP_NFCTAG_Init(0) != SUCCESS);
+  NfcTag_SelectProtocol(NFCTAG_TYPE5);
+    /* Check if no NDEF detected, init mem in Tag Type 5 */
+  if( NfcType5_NDEFDetection( ) != NDEF_OK )
+  {
+    CCFileStruct.MagicNumber = NFCT5_MAGICNUMBER_E1_CCFILE;
+    CCFileStruct.Version = NFCT5_VERSION_V1_0;
+    CCFileStruct.MemorySize = ( ST25DV_MAX_SIZE / 8 ) & 0xFF;
+    CCFileStruct.TT5Tag = 0x05;
+    /* Init of the Type Tag 5 component */
+    while( NfcType5_TT5Init( ) != NFCTAG_OK );
+  }
+
+  isInit = BSP_NFCTAG_isInitialized(0);
+  ID = BSP_NFCTAG_ReadID(0, &wai_IDD);
+  NDEF_ClearNDEF();
+
+  BSP_TSENSOR_Init();
+  BSP_HSENSOR_Init();
+  BSP_PSENSOR_Init();
+  BSP_MAGNETO_Init();
+  BSP_ACCELERO_Init();
+  BSP_GYRO_Init();
+
+
+
+
+
   /*Initialize and use WIFI module */
   if(WIFI_Init() ==  WIFI_STATUS_OK)
   {
@@ -407,6 +457,11 @@ uint32_t  retry_connect=0;
         return WIFI_FAIL;
       }
     
+
+
+      // Zaimplementuj tutaj mozliwosc dodania danych po NFC
+
+
       while((retry_connect++) < RETRY_TIMES)
       {   
         printf("wifi connect try %ld times\r\n",retry_connect);
@@ -530,6 +585,74 @@ size_t _read(int handle, unsigned char *buf, size_t bufSize)
 
 __weak void user_button_callback()
 {
+	// Zaimplementuj komunikacje NFC w celu wypelnienia danych oraz zapis do FLASH
+	// Dodaj informacje ze nie udalo polaczyc sie z WIFI lub z Azure
+
+	// Po wcisnieciu przycisku zeruj bufor NFC i sprawdz czy cos jest w tym buforze, jak nie ma to poczekaj pare sekund i znowu sprawdz
+
+	printf("Starting NFC communication!\n");
+
+	uint8_t status = 0;
+	uint8_t counter = 0;
+
+	char corrector[] = ";>";
+	char *container;
+
+	memset(&NFCBuffer[0], 0, sizeof(NFCBuffer));
+
+	if(status == 0){
+	while(counter < 5){
+	 NDEF_IdentifyNDEF(&recordStruct, NFCBuffer);
+
+	 for(uint16_t h = 0; h < sizeof(NFCBuffer); h++){
+		 if(NFCBuffer[h] != 0){
+			 status = 1;
+			 break;
+		 }
+	 }
+	 HAL_Delay(2000);
+	 if(status == 1){
+		 printf("NFC message is received!\n");
+		 break;
+	 }
+	 printf("Trying to receive NFC message!\n");
+	 counter++;
+	}
+	if(status == 0){
+	printf("NFC message is not received!\n");
+	}
+	}
+
+	if(status == 1){
+
+
+		container = strtok( (char*)NFCBuffer, corrector );
+
+	    while( container != NULL )
+	    {
+	        if(strcmp(container, "Login") == 0){
+	            container = strtok( NULL, corrector );
+	            memcpy(WIFI_SSID_var,&container,sizeof(container));
+	            printf("Login is correct: %s\n", container);
+
+	        }
+
+	        if(strcmp(container, "Password") == 0){
+	        container = strtok( NULL, corrector );
+	        memcpy(WIFI_PASSWORD_var,&container,sizeof(container));
+	        printf("Password is correct: %s\n", container);
+	        }
+
+
+
+
+	        container = strtok( NULL, corrector );
+	    }
+	}
+
+
+status = 0;
+
 }
 
 void EXTI1_IRQHandler(void)

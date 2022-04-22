@@ -44,7 +44,9 @@ RM := rm -rf
 -include Drivers/BSP/Components/lsm6dsl/subdir.mk
 -include Drivers/BSP/Components/lps22hb/subdir.mk
 -include Drivers/BSP/Components/lis3mdl/subdir.mk
+-include Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/src/subdir.mk
 -include Drivers/BSP/Components/hts221/subdir.mk
+-include Drivers/BSP/Components/VL53L0X/subdir.mk
 -include Drivers/BSP/B-L4S5I-IOT01/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

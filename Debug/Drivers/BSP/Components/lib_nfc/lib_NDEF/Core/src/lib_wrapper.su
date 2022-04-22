@@ -1,0 +1,4 @@
+lib_wrapper.c:8:10:NfcTag_SelectProtocol	16	static
+lib_wrapper.c:24:10:NfcTag_ReadNDEF	24	static
+lib_wrapper.c:48:10:NfcTag_WriteNDEF	24	static
+lib_wrapper.c:71:10:NfcTag_GetLength	24	static

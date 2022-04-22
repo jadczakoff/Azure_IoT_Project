@@ -40,7 +40,21 @@ Core/Src/board_setup.o: ../Core/Src/board_setup.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
  ../Core/Inc/stm32l4s5i_iot01.h ../Core/Inc/wifi.h ../Core/Inc/es_wifi.h \
- ../Core/Inc/es_wifi_conf.h ../Core/Inc/es_wifi_io.h
+ ../Core/Inc/es_wifi_conf.h ../Core/Inc/es_wifi_io.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_nfctag.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv_reg.h \
+ ../Drivers/CMSIS/Include/cmsis_compiler.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_wrapper.h \
+ ../Core/Inc/common.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_wrapper.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/common/inc/tagtype5_wrapper.h \
+ ../Core/Inc/../../Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_AAR.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 
@@ -131,3 +145,31 @@ Core/Src/board_setup.o: ../Core/Src/board_setup.c \
 ../Core/Inc/es_wifi_conf.h:
 
 ../Core/Inc/es_wifi_io.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_nfctag.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv_reg.h:
+
+../Drivers/CMSIS/Include/cmsis_compiler.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_wrapper.h:
+
+../Core/Inc/common.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_wrapper.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/common/inc/tagtype5_wrapper.h:
+
+../Core/Inc/../../Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_AAR.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h:

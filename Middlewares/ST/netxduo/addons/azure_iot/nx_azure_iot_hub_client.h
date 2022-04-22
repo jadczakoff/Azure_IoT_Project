@@ -99,7 +99,7 @@ extern   "C" {
 #endif /* NX_AZURE_IOT_HUB_CLIENT_TELEMETRY_QOS */
 
 #ifndef NX_AZURE_IOT_HUB_CLIENT_MAX_COMPONENT_LIST
-#define NX_AZURE_IOT_HUB_CLIENT_MAX_COMPONENT_LIST                  (4)
+#define NX_AZURE_IOT_HUB_CLIENT_MAX_COMPONENT_LIST                  (10)
 #endif /* NX_AZURE_IOT_HUB_CLIENT_MAX_COMPONENT_LIST */
 
 /* Forward declration*/

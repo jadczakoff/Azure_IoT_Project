@@ -24,7 +24,9 @@ AZURE_RTOS/App \
 Core/Src \
 Core/Startup \
 Drivers/BSP/B-L4S5I-IOT01 \
+Drivers/BSP/Components/VL53L0X \
 Drivers/BSP/Components/hts221 \
+Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/src \
 Drivers/BSP/Components/lis3mdl \
 Drivers/BSP/Components/lps22hb \
 Drivers/BSP/Components/lsm6dsl \

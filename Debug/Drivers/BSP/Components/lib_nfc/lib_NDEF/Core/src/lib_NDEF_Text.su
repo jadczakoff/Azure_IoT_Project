@@ -1,0 +1,2 @@
+lib_NDEF_Text.c:62:10:NDEF_WriteText	40	static
+lib_NDEF_Text.c:113:10:NDEF_ReadText	32	static

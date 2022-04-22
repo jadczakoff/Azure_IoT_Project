@@ -1,0 +1,4 @@
+tagtype3_wrapper.c:17:10:NfcType3_GetLength	24	static
+tagtype3_wrapper.c:36:10:NfcType3_ReadNDEF	24	static
+tagtype3_wrapper.c:54:10:NfcType3_WriteNDEF	24	static
+tagtype3_wrapper.c:80:10:NfcType3_WriteProprietary	16	static

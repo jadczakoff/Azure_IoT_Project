@@ -1,0 +1,7 @@
+sample_pnp_thermostat_component.c:43:13:sample_get_maxmin_report	80	static
+sample_pnp_thermostat_component.c:109:13:sample_send_target_temperature_report	136	static
+sample_pnp_thermostat_component.c:162:6:sample_pnp_thermostat_init	32	static
+sample_pnp_thermostat_component.c:183:6:sample_pnp_thermostat_process_command	32	static
+sample_pnp_thermostat_component.c:225:6:sample_pnp_thermostat_telemetry_send	120	static
+sample_pnp_thermostat_component.c:293:6:sample_pnp_thermostat_report_max_temp_since_last_reboot_property	120	static
+sample_pnp_thermostat_component.c:354:6:sample_pnp_thermostat_process_property_update	56	static

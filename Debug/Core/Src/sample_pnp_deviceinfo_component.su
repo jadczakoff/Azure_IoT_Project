@@ -1,0 +1,2 @@
+sample_pnp_deviceinfo_component.c:34:13:append_properties	32	static
+sample_pnp_deviceinfo_component.c:88:6:sample_pnp_deviceinfo_report_all_properties	128	static

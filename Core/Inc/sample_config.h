@@ -77,11 +77,11 @@ TODO`s: Configure core settings of application for your IoTHub.
 #endif /* ENDPOINT */
 
 #ifndef ID_SCOPE
-#define ID_SCOPE                                    "0ne0055F844"
+#define ID_SCOPE                                    "0ne005ACDB3"
 #endif /* ID_SCOPE */
 
 #ifndef REGISTRATION_ID
-#define REGISTRATION_ID                             "Main_Board"
+#define REGISTRATION_ID                             "1wt2gzucqta"
 #endif /* REGISTRATION_ID */
 
 #endif /* ENABLE_DPS_SAMPLE */
@@ -89,7 +89,7 @@ TODO`s: Configure core settings of application for your IoTHub.
 /* Optional SYMMETRIC KEY.  */
 #ifndef DEVICE_SYMMETRIC_KEY
 //#define DEVICE_SYMMETRIC_KEY                        "cGMwcj0P3i4/tW46AseXLwIULbQOjpsLBagHifiUH8s="
-#define DEVICE_SYMMETRIC_KEY                        "W/h+DAgKofb5hODtc4BG7pzuG9y4lw5yakSIQOJYWAo="
+#define DEVICE_SYMMETRIC_KEY                        "sAfTMhkU/IiirCWpgPJzHK8qXENcjCiUS9Lq4bP7wbQ="
 #endif /* DEVICE_SYMMETRIC_KEY */
 
 /* Optional module ID.  */
@@ -123,7 +123,7 @@ END TODO section
 #endif /* NX_AZURE_IOT_THREAD_PRIORITY */
 
 #ifndef SAMPLE_MAX_BUFFER
-#define SAMPLE_MAX_BUFFER                           (256)
+#define SAMPLE_MAX_BUFFER                           (2048)
 #endif /* SAMPLE_MAX_BUFFER */
 
 /* Define the sample thread stack and priority.  */
