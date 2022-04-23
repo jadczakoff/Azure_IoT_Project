@@ -1,6 +1,8 @@
-flash_l4.c:76:5:FLASH_unlock_erase	48	static
-flash_l4.c:121:5:FLASH_write_at	40	static,ignoring_inline_asm
-flash_l4.c:168:10:FLASH_get_bank	24	static
-flash_l4.c:192:5:FLASH_get_pageInBank	24	static
-flash_l4.c:224:5:FLASH_update	4144	static
-flash_l4.c:277:5:FLASH_set_boot_bank	64	static
+flash_l4.c:77:5:FLASH_unlock_erase	48	static
+flash_l4.c:122:5:FLASH_write_at	40	static,ignoring_inline_asm
+flash_l4.c:169:10:FLASH_get_bank	24	static
+flash_l4.c:193:5:FLASH_get_pageInBank	24	static
+flash_l4.c:225:5:FLASH_update	4144	static
+flash_l4.c:278:5:FLASH_set_boot_bank	64	static
+flash_l4.c:330:10:Flash_Write_Data	72	static
+flash_l4.c:366:6:Flash_Read_Data	40	static

@@ -55,6 +55,7 @@
 #include <stdbool.h>
 
 
+
 uint32_t FLASH_get_bank(uint32_t addr);
 /* Private typedef -----------------------------------------------------------*/
 /* Private defines -----------------------------------------------------------*/
@@ -323,6 +324,54 @@ int FLASH_set_boot_bank(uint32_t bank)
   }
   
   return rc;
+}
+
+
+uint32_t Flash_Write_Data (uint32_t StartPageAddress, size_t const amount, uint8_t const* const bytes)
+{
+    if (amount == 0 || bytes == NULL ) {
+        return false;
+    }
+
+    FLASH_unlock_erase(StartPageAddress, amount);
+
+    // Program the flash memory word-by-word - hence +4 to bytesCounter every iteration
+    for (uint64_t bytesCounter = 0; bytesCounter < amount; bytesCounter += 8) {
+        //uint32_t const programmingData = *(uint32_t*) (&bytes[bytesCounter]);
+    	uint64_t const programmingData = *(uint64_t*) (&bytes[bytesCounter]);
+    	uint64_t const programmingAddress = StartPageAddress + bytesCounter;
+
+        if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, programmingAddress, programmingData) != HAL_OK) {
+            return false;
+        }
+
+        uint64_t const verificationData = *(uint64_t*) programmingAddress;
+        if (verificationData != programmingData) {
+            return false;
+        }
+
+    }
+
+
+    /* Lock the Flash to disable the flash control register access (recommended
+       to protect the FLASH memory against possible unwanted operation) *********/
+    HAL_FLASH_Lock();
+
+    return 0;
+}
+
+
+
+
+void Flash_Read_Data (uint32_t StartPageAddress,size_t const amount,__IO uint8_t * DATA_8)
+{
+
+    for(uint64_t i = 0; i < amount; i++){
+        *DATA_8 = *(__IO uint8_t *)StartPageAddress;
+        StartPageAddress++;
+        DATA_8++;
+    }
+
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

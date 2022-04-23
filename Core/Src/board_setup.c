@@ -15,18 +15,27 @@
 
 /* Define the default wifi ssid and password. The user can override this 
    via -D command line option or via project settings.  */
+// Begin last page 255 \/  SPACE: 8k bytes
+#define FLASH_FREE_ADDRESS 0x081FE000
 
 char WIFI_SSID_var[128];
 char WIFI_PASSWORD_var[128];
+char FLASH_WIFI_SSID_var[128];
+char FLASH_WIFI_PASSWORD_var[128];
+char SumBufferWifi[256];
+char FLASH_SumBufferWifi[256];
+
 
 #ifndef WIFI_SSID
 //#error "Symbol WIFI_SSID must be defined."
-#define WIFI_SSID "TP-Link_5BA8"
+//#define WIFI_SSID "TP-Link_5BA8"
+#define WIFI_SSID FLASH_WIFI_SSID_var
 #endif /* WIFI_SSID  */
 
 #ifndef WIFI_PASSWORD
 //#error "Symbol WIFI_PASSWORD must be defined."
-#define WIFI_PASSWORD "krakuski"
+//#define WIFI_PASSWORD "krakuski"
+#define WIFI_PASSWORD FLASH_WIFI_PASSWORD_var
 #endif /* WIFI_PASSWORD  */
 
 /* WIFI Security type, the security types are defined in wifi.h.
@@ -411,8 +420,24 @@ uint32_t  retry_connect=0;
   BSP_ACCELERO_Init();
   BSP_GYRO_Init();
 
+  uint8_t testvalflash = 0;
 
+  Flash_Read_Data(FLASH_FREE_ADDRESS, 1, &testvalflash);
 
+  if(testvalflash != 255){
+	  Flash_Read_Data(FLASH_FREE_ADDRESS, sizeof(FLASH_SumBufferWifi), (uint8_t *)FLASH_SumBufferWifi);
+
+		char corrector[] = ";";
+		char *container;
+
+		container = strtok( FLASH_SumBufferWifi, corrector );
+		memcpy(FLASH_WIFI_SSID_var,container,strlen(container));
+		container = strtok( NULL, corrector );
+		memcpy(FLASH_WIFI_PASSWORD_var,container,strlen(container));
+
+		printf("Read datas from FLASH!\n");
+
+  }
 
 
   /*Initialize and use WIFI module */
@@ -599,6 +624,7 @@ __weak void user_button_callback()
 	char *container;
 
 	memset(&NFCBuffer[0], 0, sizeof(NFCBuffer));
+	NDEF_ClearNDEF();
 
 	if(status == 0){
 	while(counter < 5){
@@ -610,7 +636,7 @@ __weak void user_button_callback()
 			 break;
 		 }
 	 }
-	 HAL_Delay(2000);
+	 HAL_Delay(4000);
 	 if(status == 1){
 		 printf("NFC message is received!\n");
 		 break;
@@ -632,26 +658,36 @@ __weak void user_button_callback()
 	    {
 	        if(strcmp(container, "Login") == 0){
 	            container = strtok( NULL, corrector );
-	            memcpy(WIFI_SSID_var,&container,sizeof(container));
+	            memcpy(WIFI_SSID_var,container,strlen(container));
 	            printf("Login is correct: %s\n", container);
 
 	        }
 
 	        if(strcmp(container, "Password") == 0){
 	        container = strtok( NULL, corrector );
-	        memcpy(WIFI_PASSWORD_var,&container,sizeof(container));
+	        memcpy(WIFI_PASSWORD_var,container,strlen(container));
 	        printf("Password is correct: %s\n", container);
 	        }
 
-
-
-
 	        container = strtok( NULL, corrector );
 	    }
+
+		strcpy(SumBufferWifi, WIFI_SSID_var);
+		strcat(SumBufferWifi, ";");
+		strcat(SumBufferWifi, WIFI_PASSWORD_var);
+		strcat(SumBufferWifi, ";");
+
+
+		Flash_Write_Data(FLASH_FREE_ADDRESS, sizeof(SumBufferWifi), SumBufferWifi);
+
+		strcpy(FLASH_WIFI_SSID_var, WIFI_SSID_var);
+		strcpy(FLASH_WIFI_PASSWORD_var, WIFI_PASSWORD_var);
+
+		printf("Set new SSID and PASSWORD successfully!\n");
+
 	}
 
 
-status = 0;
 
 }
 
