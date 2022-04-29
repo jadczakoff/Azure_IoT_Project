@@ -481,11 +481,6 @@ uint32_t  retry_connect=0;
 #endif /* TERMINAL_USE */ 
         return WIFI_FAIL;
       }
-    
-
-
-      // Zaimplementuj tutaj mozliwosc dodania danych po NFC
-
 
       while((retry_connect++) < RETRY_TIMES)
       {   

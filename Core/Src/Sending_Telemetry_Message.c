@@ -187,12 +187,6 @@ UINT status;
                                                               &root_ca_cert)))
     {
 
-    	// Zaimplementuj tutaj mozliwosc dodania danych po NFC
-
-
-
-
-
         printf("Failed on nx_azure_iot_provisioning_client_initialize!: error code = 0x%08x\r\n", status);
         return(status);
     }
