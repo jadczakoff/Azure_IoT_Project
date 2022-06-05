@@ -1,4 +1,5 @@
 "./AZURE_RTOS/App/app_azure_rtos.o"
+"./Core/Src/NFC_Parser.o"
 "./Core/Src/Sending_Telemetry_Message.o"
 "./Core/Src/adc.o"
 "./Core/Src/app_threadx.o"

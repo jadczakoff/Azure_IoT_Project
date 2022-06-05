@@ -1,0 +1,8 @@
+NFC_Parser.c:44:6:NFC_Main_Task	8	static
+NFC_Parser.c:55:6:NFC_Send_Packet	16	static
+NFC_Parser.c:180:9:NFC_Choose_Plot	8	static
+NFC_Parser.c:261:6:RefreshSensorData	8	static
+NFC_Parser.c:312:6:InitCirclePrefix	4	static
+NFC_Parser.c:329:6:SearchingPrefix	24	static
+NFC_Parser.c:342:6:Add_Elements	32	static
+NFC_Parser.c:367:6:Take_Elements	24	static

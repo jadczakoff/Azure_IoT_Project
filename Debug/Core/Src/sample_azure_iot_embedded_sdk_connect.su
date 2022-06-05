@@ -1,3 +1,3 @@
-sample_azure_iot_embedded_sdk_connect.c:35:13:exponential_backoff_with_jitter	40	static
-sample_azure_iot_embedded_sdk_connect.c:62:13:exponential_backoff_reset	4	static
-sample_azure_iot_embedded_sdk_connect.c:102:6:sample_connection_monitor	32	static
+sample_azure_iot_embedded_sdk_connect.c:36:13:exponential_backoff_with_jitter	40	static
+sample_azure_iot_embedded_sdk_connect.c:63:13:exponential_backoff_reset	4	static
+sample_azure_iot_embedded_sdk_connect.c:103:6:sample_connection_monitor	32	static

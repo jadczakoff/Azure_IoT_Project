@@ -31,6 +31,8 @@
 #include "nxd_dns.h"
 #include "nxd_sntp_client.h"
 #include "nx_secure_tls_api.h"
+#include "es_wifi.h"
+#include "NFC_Parser.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,6 +63,7 @@ static const CHAR *sntp_servers[] =
 };
 static UINT sntp_server_index;
 
+extern ES_WIFIObject_t    EsWifiObj;
 
 
 /* USER CODE END PD */
@@ -122,6 +125,8 @@ void MX_ThreadX_Init(void)
 /* Define sample helper thread entry.  */
 void sample_helper_thread_entry(ULONG parameter)
 {
+
+	if(EsWifiObj.NetSettings.IsConnected == 1){
 
 	UINT    status;
 	ULONG   ip_address = 0;
@@ -206,6 +211,17 @@ void sample_helper_thread_entry(ULONG parameter)
 
 	    /* Start sample.  */
 	    sample_entry(&ip_0, &pool_0, &dns_0, unix_time_get);
+
+	} else {
+		while(1){
+
+
+			NFC_Main_Task();
+			//tx_thread_sleep(500);
+
+		}
+	}
+
 }
 
 #ifndef SAMPLE_DHCP_DISABLE
@@ -453,6 +469,7 @@ UINT  sntp_server_address_size = sizeof(sntp_server_address);
         while (nx_ip_gateway_address_get(&ip_0, &gateway_address))
         {
             tx_thread_sleep(NX_IP_PERIODIC_RATE);
+
         }
 
         /* Look up SNTP Server address. */

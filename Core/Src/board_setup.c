@@ -13,6 +13,8 @@
 #include "lib_NDEF_AAR.h"
 #include "lib_NDEF_Text.h"
 
+#include "NFC_Parser.h"
+
 /* Define the default wifi ssid and password. The user can override this 
    via -D command line option or via project settings.  */
 // Begin last page 255 \/  SPACE: 8k bytes
@@ -25,17 +27,18 @@ char FLASH_WIFI_PASSWORD_var[128];
 char SumBufferWifi[256];
 char FLASH_SumBufferWifi[256];
 
-
 #ifndef WIFI_SSID
 //#error "Symbol WIFI_SSID must be defined."
 //#define WIFI_SSID "TP-Link_5BA8"
 #define WIFI_SSID FLASH_WIFI_SSID_var
+//#define WIFI_SSID "cosik"
 #endif /* WIFI_SSID  */
 
 #ifndef WIFI_PASSWORD
 //#error "Symbol WIFI_PASSWORD must be defined."
 //#define WIFI_PASSWORD "krakuski"
 #define WIFI_PASSWORD FLASH_WIFI_PASSWORD_var
+//#define WIFI_PASSWORD "1243543"
 #endif /* WIFI_PASSWORD  */
 
 /* WIFI Security type, the security types are defined in wifi.h.
@@ -432,10 +435,12 @@ uint32_t  retry_connect=0;
 
 		container = strtok( FLASH_SumBufferWifi, corrector );
 		memcpy(FLASH_WIFI_SSID_var,container,strlen(container));
+
 		container = strtok( NULL, corrector );
 		memcpy(FLASH_WIFI_PASSWORD_var,container,strlen(container));
 
-		printf("Read datas from FLASH!\n");
+
+		printf("WIFI_SSID and WIFI_PASSWORD from FLASH is read!\n\r");
 
   }
 
@@ -459,7 +464,8 @@ uint32_t  retry_connect=0;
       printf("> Product Name: %s\r\n", EsWifiObj.Product_Name);
       printf("> Product ID: %s\r\n", EsWifiObj.Product_ID);
       printf("> Firmware Version: %s\r\n", EsWifiObj.FW_Rev);
-      printf("> API Version: %s\r\n", EsWifiObj.API_Rev);      
+      printf("> API Version: %s\r\n", EsWifiObj.API_Rev);
+
 #endif /* TERMINAL_USE */     
     
       if(WIFI_GetMAC_Address(MAC_Addr) == WIFI_STATUS_OK)
@@ -483,7 +489,8 @@ uint32_t  retry_connect=0;
       }
 
       while((retry_connect++) < RETRY_TIMES)
-      {   
+      {
+
         printf("wifi connect try %ld times\r\n",retry_connect);
         if( (WIFI_Connect(WIFI_SSID, WIFI_PASSWORD, WIFI_SECURITY_TYPE) == WIFI_STATUS_OK))
     {
@@ -605,12 +612,9 @@ size_t _read(int handle, unsigned char *buf, size_t bufSize)
 
 __weak void user_button_callback()
 {
-	// Zaimplementuj komunikacje NFC w celu wypelnienia danych oraz zapis do FLASH
-	// Dodaj informacje ze nie udalo polaczyc sie z WIFI lub z Azure
 
-	// Po wcisnieciu przycisku zeruj bufor NFC i sprawdz czy cos jest w tym buforze, jak nie ma to poczekaj pare sekund i znowu sprawdz
 
-	printf("Starting NFC communication!\n");
+	printf("Starting NFC communication!\n\r");
 
 	uint8_t status = 0;
 	uint8_t counter = 0;
@@ -633,14 +637,14 @@ __weak void user_button_callback()
 	 }
 	 HAL_Delay(4000);
 	 if(status == 1){
-		 printf("NFC message is received!\n");
+		 printf("NFC message is received!\n\r");
 		 break;
 	 }
-	 printf("Trying to receive NFC message!\n");
+	 printf("Trying to receive NFC message!\n\r");
 	 counter++;
 	}
 	if(status == 0){
-	printf("NFC message is not received!\n");
+	printf("NFC message is not received!\n\r");
 	}
 	}
 
@@ -654,14 +658,14 @@ __weak void user_button_callback()
 	        if(strcmp(container, "Login") == 0){
 	            container = strtok( NULL, corrector );
 	            memcpy(WIFI_SSID_var,container,strlen(container));
-	            printf("Login is correct: %s\n", container);
+	            printf("Login is correct: %s\n\r", container);
 
 	        }
 
 	        if(strcmp(container, "Password") == 0){
 	        container = strtok( NULL, corrector );
 	        memcpy(WIFI_PASSWORD_var,container,strlen(container));
-	        printf("Password is correct: %s\n", container);
+	        printf("Password is correct: %s\n\r", container);
 	        }
 
 	        container = strtok( NULL, corrector );
@@ -678,7 +682,7 @@ __weak void user_button_callback()
 		strcpy(FLASH_WIFI_SSID_var, WIFI_SSID_var);
 		strcpy(FLASH_WIFI_PASSWORD_var, WIFI_PASSWORD_var);
 
-		printf("Set new SSID and PASSWORD successfully!\n");
+		printf("Set new SSID and PASSWORD successfully!\n\r");
 
 	}
 

@@ -96,7 +96,17 @@ Core/Src/Sending_Telemetry_Message.o: \
  c:\users\domin\stm32cubeide\workspace_1.8.0\azure_iot_project_1\drivers\bsp\components\lps22hb\lps22hb.h \
  c:\users\domin\stm32cubeide\workspace_1.8.0\azure_iot_project_1\drivers\bsp\components\common\psensor.h \
  c:\users\domin\stm32cubeide\workspace_1.8.0\azure_iot_project_1\drivers\bsp\components\common\tsensor.h \
- C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_tsensor.h
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_tsensor.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_nfctag.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv_reg.h \
+ ../Drivers/CMSIS/Include/cmsis_compiler.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_wrapper.h \
+ ../Core/Inc/common.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h \
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
+ ../Core/Inc/NFC_Parser.h ../Core/Inc/main.h
 
 ../Middlewares/ST/netxduo/common/inc/nx_api.h:
 
@@ -297,3 +307,25 @@ c:\users\domin\stm32cubeide\workspace_1.8.0\azure_iot_project_1\drivers\bsp\comp
 c:\users\domin\stm32cubeide\workspace_1.8.0\azure_iot_project_1\drivers\bsp\components\common\tsensor.h:
 
 C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_tsensor.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/B-L4S5I-IOT01/stm32l4s5i_iot01_nfctag.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/st25dv/st25dv_reg.h:
+
+../Drivers/CMSIS/Include/cmsis_compiler.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_wrapper.h:
+
+../Core/Inc/common.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h:
+
+C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h:
+
+../Core/Inc/NFC_Parser.h:
+
+../Core/Inc/main.h:

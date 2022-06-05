@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 #include "nx_azure_iot_hub_client.h"
+#include "NFC_Parser.h"
 
 #ifndef SAMPLE_MAX_EXPONENTIAL_BACKOFF_IN_SEC
 #define SAMPLE_MAX_EXPONENTIAL_BACKOFF_IN_SEC                           (10 * 60)
@@ -168,6 +169,15 @@ ULONG gateway_address;
 
                         /* Connect to iot hub.  */
                         connection_status = nx_azure_iot_hub_client_connect(hub_client_ptr, NX_FALSE, NX_WAIT_FOREVER);
+                    }
+
+                    if(iothub_init_count > 3){
+                    	printf("NIE UDALO SIE POLACZYC Z PLATFORMA AZURE!\n\r");
+                    	printf("TRYB WYMIANY DANYCH PO NFC TYLKO WLACZONY!\n\r");
+                    	while(1){
+                    		NFC_Main_Task();
+                    		//tx_thread_sleep(500);
+                    	}
                     }
                 }
                 break;

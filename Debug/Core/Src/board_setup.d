@@ -54,7 +54,8 @@ Core/Src/board_setup.o: ../Core/Src/board_setup.c \
  ../Core/Inc/../../Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
  C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_AAR.h \
  C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h \
- C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h
+ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h \
+ ../Core/Inc/NFC_Parser.h ../Core/Inc/main.h
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 
@@ -173,3 +174,7 @@ C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Comp
 C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF.h:
 
 C:/Users/domin/STM32CubeIDE/workspace_1.8.0/Azure_IoT_Project_1/Drivers/BSP/Components/lib_nfc/lib_NDEF/Core/inc/lib_NDEF_Text.h:
+
+../Core/Inc/NFC_Parser.h:
+
+../Core/Inc/main.h:

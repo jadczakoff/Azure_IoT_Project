@@ -25,6 +25,10 @@
 #include "stm32l4s5i_iot01_magneto.h"
 #include "stm32l4s5i_iot01_psensor.h"
 #include "stm32l4s5i_iot01_tsensor.h"
+#include "stm32l4s5i_iot01_nfctag.h"
+#include "lib_NDEF.h"
+#include "lib_NDEF_Text.h"
+#include "NFC_Parser.h"
 
 #define TELEMETRY_HUMIDITY          "humidity"
 #define TELEMETRY_TEMPERATURE       "temperature"
@@ -49,7 +53,9 @@ static const CHAR magnetometer_component[] = "Magnetometer";
 static const CHAR accelerometer_component[] = "Accelerometer";
 static const CHAR gyroscope_component[] = "Gyroscope";
 
-
+#define REFRESH_TIME_NFC	(15000)
+#define REFRESH_TIME_CHECK_NFC	(1000)
+#define SIZE_NFC_ARRAY (50)
 
 float Humidity;
 float Temp;
@@ -58,7 +64,6 @@ int16_t Magnetometer[3];
 int16_t Accelerometr[3];
 int16_t Gyroscope[3];
 bool LedState;
-
 
 
 #ifndef SAMPLE_WAIT_OPTION
@@ -1063,6 +1068,9 @@ ULONG app_events;
 
         /* Connection monitor.  */
         sample_connection_monitor(ip_ptr, &iothub_client, sample_connection_status, sample_initialize_iothub);
+
+        NFC_Main_Task();
+
     }
 
     /* Cleanup.  */
@@ -1071,7 +1079,6 @@ ULONG app_events;
     nx_azure_iot_hub_client_deinitialize(&iothub_client);
     nx_azure_iot_delete(&nx_azure_iot);
 }
-
 
 
 
